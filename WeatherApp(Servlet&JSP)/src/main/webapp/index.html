@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500&family=Mooli&family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <title>WeatherApp</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        
+        box-sizing: border-box;
+        font-family: 'Anuphan', sans-serif;
+        font-family: 'Mooli', sans-serif;
+        font-family: 'Poppins', sans-serif;
+
+    }
+    body{
+        height: 100vh;
+        background: url("bckg.jpg");
+        background-position: center;
+        background-size: cover;
+        
+        
+    }
+    
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        font-size: 1rem;
+        color: cornsilk;
+    }
+    a:hover{
+        color: rgb(212, 209, 215);
+        font-size: 1.3rem;
+        /* border: 0.1rem solid whitesmoke; */
+        border-radius: 15%;
+    }
+    header{
+        position: relative; 
+        padding: 1.8rem;
+        height: 9vh;
+        border-bottom: 1px solid whitesmoke;
+        
+       
+
+    }
+    .navbar{
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex ;
+        justify-content: space-between;
+        
+
+    }
+    .navbar .logo a{
+        font-weight: bold;
+        font-size: 1.5rem;
+        opacity: 11.8;
+        
+    }
+    .navbar .links{
+        display: flex;
+        gap: 2rem;
+        margin-right: 12vh;
+    }
+
+
+    main{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container{
+    position: relative;
+    width: 313px;
+    height: 51px;
+    background: #fff;
+    padding: 6px 20px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto',sans-serif;
+    transition: 0.6s ease-out;
+    background-color: aliceblue;
+    margin-top: -60vh;
+    margin-left: -8vh;
+    
+    }
+    .search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.search-box input{
+    color: #06283D;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 11px;
+    border:none;
+    outline:none;
+}
+
+.search-box input::placeholder{
+    font-size: 18px;
+    font-weight: 400;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+.search-box button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: white;
+    border-radius: 30%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search-box button:hover{
+    color: #fff;
+    background: #06283D;
+
+}
+
+.search-box i{
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+.search{
+    border-radius: 10%;
+    border:none;
+    outline:none;
+}
+
+.footer_container{
+    background-color: aliceblue;
+    
+}
+
+section .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section .row .details{
+    padding: 5px 10px;
+}
+
+.footer_container .foot .grid_container .row .aboutdetails{
+    margin-top: -3vh;
+    width: 35vh;
+}
+.footer_container .foot .grid_container .row .follow_details{
+    margin-top: -7vh;
+    padding: 20px;
+}
+
+.footer_container .foot .grid_container .row .follow_details .sociallink{
+    padding: 8px;
+    border-radius: 40%;
+    gap: 2rem;
+    margin: 3px;
+}
+
+form{
+    margin-top: 60vh;
+}
+    
+    
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">WeatherApp</a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#FOOTER">About</a></li>
+                <li><a href="#FOOTER">Contact</a></li>
+            </ul>          
+        </div>  
+    </header>
+    <main>
+        <form action="Servlet" method="post">
+            <div class="container">
+                <div class="search-box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Enter City Name" class="search" name="userInput">
+                    <button class="fa-solid fa-magnifying-glass" onClick=""></button>
+                </div>
+            </div>    
+        </form>
+    </main>
+    <div class="footer_container" id="FOOTER">
+        <footer class="foot">
+            <div class="grid_container">
+                <section>
+                    <div class="row">
+                        <div class="aboutdetails">
+                            <h2>About</h2>
+                            <p>This website is my first project using servlet</p>
+                        </div>
+                          
+                        <div class="contactdetails">
+                            <h2>Contact</h2>
+                            <p><i class="fa-solid fa-house"></i>Shri ramdeobab College  </p>
+                            <p><i class="fa-solid fa-envelope"></i>dubeyh@rknec.edu</p>
+                            <p><i class="fa-solid fa-phone"></i> +91 9033862771</p>
+                        </div>
+                        <div class="follow_details">
+                            <h2>Social Links</h2>
+                            
+                            <a href="https://www.instagram.com/_dubey.harsh/" target="_blank" role="button" style="background-color: #ac2bac" class="sociallink"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/Radheya-2811" role="button"  style="background-color: #333333" class="sociallink" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/harsh-dubey-6a07351a5/" role="button" style="background-color: #0082ca" class="sociallink" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="" role="button" style="background-color: #dd4b39" class="sociallink" tabindex="_blank"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
