@@ -1,0 +1,47 @@
+h1{
+    font-weight: bold;
+    color: rgb(65, 12, 12);
+}
+
+body{
+    background: url(bg.jpg);
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+.cont{
+    opacity: 1;
+    width: 70vh;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0,1,0.5);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+p{
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+.links a{
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 1 ease;
+}
+
+.links a:hover{
+    color: brown;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color:blanchedalmond
+}
+
+
